@@ -1028,35 +1028,17 @@ duration-300
 
 
 <img
-
-src={`/images/${img}`}
-
-const galleryAlt = [
-  "Pudding Buah Premium Pontianak",
-  "Pudding Buah Segar Pontianak",
-  "Pudding Birthday Custom Pontianak",
-  "Dessert Premium Pontianak",
-  "Pudding Hampers Pontianak",
-  "Pudding Buah Homemade",
-  "Pudding Buah Fresh",
-  "Pudding Untuk Ulang Tahun",
-  "Dessert Box Pontianak",
-  "Pudding Premium Buah Segar",
-  "Pudding Cup Premium",
-  "Pudding Cup Mini"
-];
-
-loading="lazy"
-
-className="
-w-full
-aspect-square
-object-cover
-group-hover:scale-110
-transition
-duration-500
-"
-
+  src={`/images/${img}`}
+  alt="Pudding Buah Premium Pontianak"
+  loading="lazy"
+  className="
+    w-full
+    aspect-square
+    object-cover
+    group-hover:scale-110
+    transition
+    duration-500
+  "
 />
 
 
