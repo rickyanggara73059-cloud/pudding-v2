@@ -1,0 +1,6 @@
+{
+  "name": "Pudding Buah Pontianak",
+  "description": "Dessert premium, hampers, birthday cake, dan pudding ulang tahun dengan buah segar melimpah di Pontianak.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
