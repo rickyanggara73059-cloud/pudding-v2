@@ -23,6 +23,7 @@ import {
   Calendar,
   MessageSquare
 } from "lucide-react";
+import { Navbar } from "./components/Navbar";
 
 
 // ===============================
@@ -208,199 +209,11 @@ dark:text-white
 
 
 {/* NAVBAR */}
-
-<header className="
-fixed top-0
-w-full
-z-50
-bg-white/80
-dark:bg-slate-900/80
-backdrop-blur
-shadow
-">
-
-<div className="
-max-w-7xl
-mx-auto
-px-4
-py-3
-flex
-justify-between
-items-center
-">
-
-
-<div className="flex items-center gap-3">
-
-<div className="
-w-11
-h-11
-rounded-xl
-overflow-hidden
-shadow
-">
-
-<img
-src="/logo.png"
-alt="Pudding Buah Pontianak"
-className="
-w-full
-h-full
-object-cover
-"
+<Navbar
+  darkMode={dark}
+  setDarkMode={setDark}
+  onOpenOrderModal={() => setModal(true)}
 />
-
-</div>
-
-
-<div>
-
-<h1 className="
-font-bold
-text-lg
-">
-
-Pudding Buah
-
-</h1>
-
-<p className="
-text-xs
-text-orange-500
-">
-
-Pontianak
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div className="
-hidden md:flex
-gap-5
-text-sm
-font-semibold
-">
-
-<a href="#produk">Menu</a>
-
-<a href="#galeri">Galeri</a>
-
-<a href="#testimoni">Testimoni</a>
-
-<a href="#faq">FAQ</a>
-
-<a href="#kontak">Kontak</a>
-
-</div>
-
-
-
-<div className="flex gap-2">
-
-
-<button
-onClick={()=>setDark(!dark)}
-className="
-p-3
-rounded-full
-bg-slate-100
-dark:bg-slate-800
-">
-
-{
-dark?
-<Sun size={18}/>
-:
-<Moon size={18}/>
-}
-
-</button>
-
-
-<a
-href={waLink()}
-className="
-hidden sm:flex
-items-center
-gap-2
-px-4
-py-2
-rounded-full
-bg-green-500
-text-white
-font-bold
-text-sm
-">
-
-<Phone size={16}/>
-WA
-
-</a>
-
-
-
-<button
-onClick={()=>setMenu(!menu)}
-className="
-md:hidden
-p-3
-">
-
-{
-menu?
-<X/>
-:
-<Menu/>
-}
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-{
-menu&&
-
-<div className="
-md:hidden
-p-5
-bg-white
-dark:bg-slate-900
-space-y-3
-">
-
-<a href="#produk"
-className="block">
-Menu
-</a>
-
-<a href="#faq"
-className="block">
-FAQ
-</a>
-
-<a href="#kontak"
-className="block">
-Kontak
-</a>
-
-
-</div>
-
-}
-
-
-</header>
 {/* HERO SECTION */}
 
 <section
@@ -885,7 +698,6 @@ font-bold
 mt-2
 ">
 
-{product.price}
 
 </p>
 

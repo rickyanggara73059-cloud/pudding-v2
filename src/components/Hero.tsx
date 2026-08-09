@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ShoppingBag,
   ArrowRight,
@@ -9,879 +9,980 @@ import {
   Instagram,
   Facebook,
   MapPin,
-  Clock
-} from 'lucide-react';
+} from "lucide-react";
 
 import {
   BUSINESS_INFO,
-  buildWhatsAppLink
-} from '../data/businessData';
-
+  buildWhatsAppLink,
+} from "../data/businessData";
 
 interface HeroProps {
   onOpenOrderModal: () => void;
 }
 
-
 export const Hero: React.FC<HeroProps> = ({
-  onOpenOrderModal
+  onOpenOrderModal,
 }) => {
+  return (
+    <section
+      id="hero"
+      className="
+        relative
+        min-h-[680px]
+        overflow-hidden
+        bg-gradient-to-br
+        from-[#fffaf5]
+        via-white
+        to-[#fff3e6]
+        pt-28
+        sm:pt-32
+        pb-16
+        sm:pb-20
+      "
+    >
+
+      {/* ========================= */}
+      {/* BACKGROUND DECORATION */}
+      {/* ========================= */}
+
+      <div
+        className="
+          absolute
+          -top-32
+          -left-32
+          w-[420px]
+          h-[420px]
+          rounded-full
+          bg-amber-200/30
+          blur-3xl
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          absolute
+          top-1/3
+          -right-40
+          w-[500px]
+          h-[500px]
+          rounded-full
+          bg-orange-200/25
+          blur-3xl
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          absolute
+          bottom-0
+          left-1/3
+          w-80
+          h-80
+          rounded-full
+          bg-rose-100/30
+          blur-3xl
+          pointer-events-none
+        "
+      />
+
+      {/* Decorative lines */}
+
+      <div
+        className="
+          absolute
+          top-32
+          right-10
+          w-24
+          h-24
+          border
+          border-orange-200/50
+          rounded-full
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          absolute
+          top-40
+          right-16
+          w-10
+          h-10
+          rounded-full
+          bg-orange-300/20
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          relative
+          z-10
+        "
+      >
+
+        <div
+          className="
+            grid
+            lg:grid-cols-12
+            gap-12
+            lg:gap-16
+            items-center
+          "
+        >
+
+          {/* ================================================== */}
+          {/* LEFT CONTENT */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              lg:col-span-7
+              text-center
+              lg:text-left
+              animate-fade-in
+            "
+          >
+
+            {/* BRAND LABEL */}
+
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-2
+                px-4
+                py-2
+                rounded-full
+                bg-white/80
+                dark:bg-slate-800/80
+                border
+                border-orange-200
+                dark:border-slate-700
+                shadow-sm
+                backdrop-blur
+                text-orange-600
+                dark:text-orange-400
+                text-xs
+                sm:text-sm
+                font-bold
+              "
+            >
+              <Sparkles className="w-4 h-4" />
+
+              BRAND PUDDING BUAH PONTIANAK
+            </div>
 
 
-const highlightBadges = [
-  {
-    icon:'🍓',
-    text:'Buah Premium Segar'
-  },
-  {
-    icon:'🎁',
-    text:'Hampers Elegan'
-  },
-  {
-    icon:'🎂',
-    text:'Custom Birthday'
-  },
-  {
-    icon:'🚚',
-    text:'Delivery Area Pontianak'
-  }
-];
+            {/* MAIN TITLE */}
+
+            <h1
+              className="
+                mt-6
+                text-4xl
+                sm:text-5xl
+                lg:text-6xl
+                xl:text-7xl
+                font-black
+                leading-[1.05]
+                tracking-tight
+                text-slate-900
+                dark:text-white
+              "
+            >
+              Pudding Buah
+
+              <span
+                className="
+                  block
+                  mt-2
+                  bg-gradient-to-r
+                  from-amber-500
+                  via-orange-500
+                  to-rose-500
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                Pontianak
+              </span>
+            </h1>
 
 
+            {/* DIVIDER */}
 
-return (
+            <div
+              className="
+                mt-6
+                flex
+                items-center
+                justify-center
+                lg:justify-start
+                gap-3
+              "
+            >
 
-<section
-id="hero"
-className="
-relative
-overflow-hidden
-pt-24
-sm:pt-32
-pb-10
-sm:pb-20
-"
->
+              <div
+                className="
+                  h-1
+                  w-12
+                  rounded-full
+                  bg-gradient-to-r
+                  from-amber-400
+                  to-orange-500
+                "
+              />
+
+              <span
+                className="
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-slate-400
+                "
+              >
+                Premium Homemade Dessert
+              </span>
+
+            </div>
 
 
-<div className="
-absolute
-top-20
--left-20
-w-80
-h-80
-bg-amber-400/20
-rounded-full
-blur-3xl
-"
+            {/* DESCRIPTION */}
+
+            <p
+              className="
+                mt-6
+                max-w-2xl
+                mx-auto
+                lg:mx-0
+                text-base
+                sm:text-lg
+                leading-relaxed
+                text-slate-600
+                dark:text-slate-300
+              "
+            >
+              Menghadirkan pudding buah premium dengan tekstur
+              lembut, buah segar pilihan, dan vla vanilla homemade.
+              Dibuat dengan penuh perhatian untuk menghadirkan
+              pengalaman dessert yang istimewa.
+            </p>
+
+
+            {/* BRAND VALUES */}
+
+            <div
+              className="
+                mt-7
+                flex
+                flex-wrap
+                justify-center
+                lg:justify-start
+                gap-x-6
+                gap-y-3
+              "
+            >
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-slate-700
+                  dark:text-slate-200
+                "
+              >
+                <ShieldCheck
+                  className="
+                    w-5
+                    h-5
+                    text-green-500
+                  "
+                />
+
+                Bahan Berkualitas
+              </div>
+
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-slate-700
+                  dark:text-slate-200
+                "
+              >
+                <Star
+                  className="
+                    w-5
+                    h-5
+                    fill-yellow-400
+                    text-yellow-400
+                  "
+                />
+
+                Fresh Setiap Hari
+              </div>
+
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-slate-700
+                  dark:text-slate-200
+                "
+              >
+                <MapPin
+                  className="
+                    w-5
+                    h-5
+                    text-orange-500
+                  "
+                />
+
+                Pontianak
+              </div>
+
+            </div>
+
+
+            {/* CTA */}
+
+            <div
+              className="
+                mt-8
+                flex
+                flex-col
+                sm:flex-row
+                gap-3
+                justify-center
+                lg:justify-start
+              "
+            >
+
+              {/* PRIMARY CTA */}
+
+              <a
+                href={buildWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  group
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  px-7
+                  py-4
+                  rounded-2xl
+                  bg-gradient-to-r
+                  from-amber-500
+                  via-orange-500
+                  to-orange-600
+                  text-white
+                  font-bold
+                  shadow-xl
+                  shadow-orange-500/20
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-2xl
+                  hover:shadow-orange-500/30
+                "
+              >
+
+                <ShoppingBag className="w-5 h-5" />
+
+                Pesan Sekarang
+
+                <ArrowRight
+                  className="
+                    w-4
+                    h-4
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                />
+
+              </a>
+
+
+              {/* SECONDARY CTA */}
+
+              <button
+                onClick={onOpenOrderModal}
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  px-7
+                  py-4
+                  rounded-2xl
+                  bg-white
+                  dark:bg-slate-800
+                  border
+                  border-orange-200
+                  dark:border-slate-700
+                  text-slate-800
+                  dark:text-white
+                  font-bold
+                  shadow-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-orange-400
+                  hover:shadow-lg
+                "
+              >
+
+                <Sparkles
+                  className="
+                    w-4
+                    h-4
+                    text-orange-500
+                  "
+                />
+
+                Custom Order
+
+              </button>
+
+            </div>
+
+
+            {/* TRUST */}
+
+            <div
+              className="
+                mt-8
+                pt-6
+                border-t
+                border-orange-100
+                dark:border-slate-800
+                flex
+                flex-wrap
+                justify-center
+                lg:justify-start
+                gap-x-7
+                gap-y-4
+              "
+            >
+
+              {/* RATING */}
+
+              <div className="flex items-center gap-2">
+
+                <div
+                  className="
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-yellow-100
+                    flex
+                    items-center
+                    justify-center
+                  "
+                >
+
+                  <Star
+                    className="
+                      w-5
+                      h-5
+                      fill-yellow-400
+                      text-yellow-400
+                    "
+                  />
+
+                </div>
+
+                <div className="text-left">
+
+                  <p
+                    className="
+                      text-sm
+                      font-black
+                      text-slate-900
+                      dark:text-white
+                    "
+                  >
+                    4.9/5
+                  </p>
+
+                  <p
+                    className="
+                      text-[11px]
+                      text-slate-500
+                      dark:text-slate-400
+                    "
+                  >
+                    Kepuasan Pelanggan
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              {/* FRESH */}
+
+              <div className="flex items-center gap-2">
+
+                <div
+                  className="
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-green-100
+                    flex
+                    items-center
+                    justify-center
+                  "
+                >
+
+                  <ShieldCheck
+                    className="
+                      w-5
+                      h-5
+                      text-green-600
+                    "
+                  />
+
+                </div>
+
+                <div className="text-left">
+
+                  <p
+                    className="
+                      text-sm
+                      font-black
+                      text-slate-900
+                      dark:text-white
+                    "
+                  >
+                    Fresh Daily
+                  </p>
+
+                  <p
+                    className="
+                      text-[11px]
+                      text-slate-500
+                      dark:text-slate-400
+                    "
+                  >
+                    Dibuat Tanpa Pengawet
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* SOCIAL */}
+
+            <div
+              className="
+                mt-5
+                flex
+                justify-center
+                lg:justify-start
+                gap-5
+              "
+            >
+
+              <a
+                href={BUSINESS_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-pink-500
+                  transition
+                  hover:text-pink-600
+                "
+              >
+
+                <Instagram className="w-4 h-4" />
+
+                Instagram
+
+              </a>
+
+
+              <a
+                href={BUSINESS_INFO.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-blue-500
+                  transition
+                  hover:text-blue-600
+                "
+              >
+
+                <Facebook className="w-4 h-4" />
+
+                Facebook
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          {/* ================================================== */}
+          {/* RIGHT VISUAL */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              lg:col-span-5
+              relative
+              mt-8
+              lg:mt-0
+            "
+          >
+
+            {/* OUTER GLOW */}
+
+            <div
+              className="
+                absolute
+                inset-6
+                rounded-[3rem]
+                bg-gradient-to-br
+                from-amber-300
+                via-orange-300
+                to-rose-300
+                blur-3xl
+                opacity-40
+              "
+            />
+
+
+            {/* MAIN IMAGE */}
+
+            <div
+              className="
+                relative
+                rounded-[2.5rem]
+                overflow-hidden
+                border
+                border-white
+                dark:border-slate-700
+                bg-white
+                dark:bg-slate-800
+                shadow-2xl
+                shadow-orange-900/10
+                group
+              "
+            >
+
+              <img
+                src="/images/foto1.png"
+                alt="Pudding Buah Premium Pontianak"
+                loading="eager"
+                className="
+                  w-full
+                  h-[400px]
+                  sm:h-[500px]
+                  lg:h-[570px]
+                  object-cover
+                  transition-transform
+                  duration-1000
+                  group-hover:scale-105
+                "
+              />
+
+
+              {/* IMAGE OVERLAY */}
+
+              <div
+  className="
+    absolute
+    inset-0
+    bg-gradient-to-t
+    from-orange-900/10
+    via-transparent
+    to-transparent
+    pointer-events-none
+  "
 />
 
 
-<div className="
-absolute
-bottom-0
-right-0
-w-96
-h-96
-bg-orange-500/20
-rounded-full
-blur-3xl
-"
-/>
-
-
-
-<div className="
-max-w-7xl
-mx-auto
-px-4
-sm:px-6
-lg:px-8
-relative
-z-10
-">
-
-
-<div className="
-grid
-lg:grid-cols-12
-gap-10
-items-center
-">
-
-
-
-{/* TEXT */}
-
-<div
-className="
-lg:col-span-7
-text-center
-lg:text-left
-space-y-5
-animate-fade-in
-"
->
-
-
-<div
-className="
-inline-flex
-items-center
-gap-2
-px-4
-py-2
-rounded-full
-bg-amber-100
-text-amber-700
-font-bold
-text-xs
-"
->
-
-<Sparkles className="w-4 h-4"/>
-
-Dessert Premium Pontianak
-
-</div>
-
-
-
-
-<h1
-className="
-text-3xl
-sm:text-5xl
-lg:text-6xl
-font-black
-leading-tight
-text-slate-900
-dark:text-white
-"
->
-
-Pudding Buah
-
-<span
-className="
-bg-gradient-to-r
-from-amber-500
-to-orange-500
-bg-clip-text
-text-transparent
-"
->
-
- Pontianak
-
-</span>
-
-</h1>
-
-
-
-
-<p
-className="
-text-sm
-sm:text-lg
-text-slate-600
-dark:text-slate-300
-leading-relaxed
-"
->
-
-Pudding sutra lembut dengan buah segar pilihan,
-vla vanilla homemade,
-dan kreasi premium untuk
-<strong>
- hampers, ulang tahun, dan acara spesial.
-</strong>
-
-</p>
-
-
-
-
-
-<div
-className="
-flex
-flex-wrap
-justify-center
-lg:justify-start
-gap-2
-"
->
-
-{
-highlightBadges.map((item,index)=>(
-
-<div
-
-key={index}
-
-className="
-px-3
-py-2
-rounded-xl
-bg-white
-dark:bg-slate-800
-shadow-sm
-border
-text-xs
-font-semibold
-"
-
->
-
-{item.icon}
-{" "}
-{item.text}
-
-</div>
-
-))
-}
-
-</div>
-
-
-
-
-<div
-className="
-flex
-flex-col
-sm:flex-row
-gap-3
-justify-center
-lg:justify-start
-pt-3
-"
->
-
-
-<a
-
-href={buildWhatsAppLink()}
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-className="
-px-6
-py-3
-rounded-2xl
-bg-gradient-to-r
-from-amber-500
-to-orange-500
-text-white
-font-bold
-shadow-lg
-flex
-items-center
-justify-center
-gap-2
-hover:scale-105
-transition
-"
-
->
-
-<ShoppingBag className="w-5 h-5"/>
-
-Pesan Sekarang
-
-<ArrowRight className="w-4 h-4"/>
-
-</a>
-
-
-
-<button
-
-onClick={onOpenOrderModal}
-
-className="
-px-6
-py-3
-rounded-2xl
-bg-white
-dark:bg-slate-800
-border
-font-bold
-flex
-items-center
-justify-center
-gap-2
-"
-
->
-
-<Sparkles className="w-4 h-4 text-orange-500"/>
-
-Custom Order
-
-</button>
-
-
-
-</div>
-// LANJUTAN HERO.TSX
-
-
-{/* TRUST INFO */}
-
-<div
-className="
-mt-6
-pt-5
-border-t
-border-slate-200
-dark:border-slate-800
-flex
-flex-wrap
-justify-center
-lg:justify-start
-gap-4
-text-xs
-"
->
-
-
-<div className="
-flex
-items-center
-gap-2
-text-slate-600
-dark:text-slate-300
-">
-
-<div className="
-w-8
-h-8
-rounded-full
-bg-yellow-100
-flex
-items-center
-justify-center
-">
-
-<Star
-className="
-w-4
-h-4
-fill-yellow-400
-text-yellow-400
-"
-/>
-
-</div>
-
-
-<div>
-
-<b className="
-text-slate-900
-dark:text-white
-">
-4.9/5
-</b>
-
-<br/>
-
-<span>
-1.500+ Pesanan
-</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<div className="
-flex
-items-center
-gap-2
-text-slate-600
-dark:text-slate-300
-">
-
-
-<div className="
-w-8
-h-8
-rounded-full
-bg-green-100
-flex
-items-center
-justify-center
-">
-
-<ShieldCheck
-className="
-w-4
-h-4
-text-green-600
-"
-/>
-
-</div>
-
-
-<div>
-
-<b className="
-text-slate-900
-dark:text-white
-">
-Fresh Daily
-</b>
-
-<br/>
-
-<span>
-Tanpa Pengawet
-</span>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div className="
-flex
-items-center
-gap-2
-text-slate-600
-dark:text-slate-300
-">
-
-
-<div className="
-w-8
-h-8
-rounded-full
-bg-orange-100
-flex
-items-center
-justify-center
-">
-
-<MapPin
-className="
-w-4
-h-4
-text-orange-500
-"
-/>
-
-</div>
-
-
-<div>
-
-<b className="
-text-slate-900
-dark:text-white
-">
-Pontianak
-</b>
-
-<br/>
-
-<span>
-Kubu Raya & Sekitar
-</span>
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-{/* SOCIAL */}
-
-<div
-className="
-flex
-justify-center
-lg:justify-start
-gap-4
-mt-4
-"
->
-
-
-<a
-
-href={BUSINESS_INFO.instagramUrl}
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-className="
-flex
-items-center
-gap-2
-text-sm
-font-semibold
-text-pink-500
-"
-
->
-
-<Instagram
-className="w-4 h-4"
-/>
-
-Instagram
-
-</a>
-
-
-
-<a
-
-href={BUSINESS_INFO.facebookUrl}
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-className="
-flex
-items-center
-gap-2
-text-sm
-font-semibold
-text-blue-500
-"
-
->
-
-<Facebook
-className="w-4 h-4"
-/>
-
-Facebook
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-{/* IMAGE */}
-
-<div
-className="
-lg:col-span-5
-relative
-"
->
-
-
-<div
-className="
-absolute
-inset-0
-bg-gradient-to-r
-from-amber-400
-to-orange-500
-blur-3xl
-opacity-20
-rounded-full
-"
-/>
-
-
-
-
-<div
-className="
-relative
-rounded-3xl
-overflow-hidden
-border-4
-border-white
-dark:border-slate-800
-shadow-2xl
-group
-"
->
-
-
-<img
-
-src="/foto1.png"
-
-alt="Pudding Buah Premium Pontianak"
-
-loading="eager"
-
-className="
-w-full
-h-[320px]
-sm:h-[430px]
-object-cover
-group-hover:scale-105
-transition
-duration-700
-"
-
-/>
-
-
-
-
-<div
-className="
-absolute
-inset-0
-bg-gradient-to-t
-from-black/70
-via-transparent
-"
-/>
-
-
-
-
-
-<div
-className="
-absolute
-bottom-5
-left-5
-right-5
-bg-white/90
-dark:bg-slate-900/90
-backdrop-blur
-rounded-2xl
-p-4
-"
->
-
-
-<div
-className="
-flex
-justify-between
-items-center
-"
->
-
-
-<div>
-
-<p
-className="
-text-xs
-font-bold
-text-orange-500
-uppercase
-"
->
-Premium Homemade
-</p>
-
-
-<h3
-className="
-font-black
-text-slate-900
-dark:text-white
-"
->
-Fresh Fruit Pudding
-</h3>
-
-
-</div>
-
-
-
-<div
-className="
-px-3
-py-1
-rounded-full
-bg-orange-500
-text-white
-text-xs
-font-bold
-"
->
-Fresh
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-{/* FLOAT BADGE */}
-
-<div
-className="
-absolute
--top-4
-left-3
-sm:left-0
-bg-white
-dark:bg-slate-800
-rounded-2xl
-shadow-xl
-p-3
-flex
-gap-2
-items-center
-"
->
-
-
-<ShieldCheck
-className="
-text-green-500
-"
-/>
-
-
-<div>
-
-<p
-className="
-text-[10px]
-text-slate-400
-"
->
-Quality
-</p>
-
-<p
-className="
-text-xs
-font-bold
-"
->
-100% Buah Segar
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div
-className="
-absolute
--bottom-4
-right-3
-sm:right-0
-bg-white
-dark:bg-slate-800
-rounded-2xl
-shadow-xl
-p-3
-flex
-gap-2
-items-center
-"
->
-
-
-<Heart
-className="
-text-red-500
-fill-red-500
-"
-/>
-
-
-
-<div>
-
-<p
-className="
-text-xs
-font-bold
-"
->
-Halal & Higienis
-</p>
-
-
-<p
-className="
-text-[10px]
-text-slate-400
-"
->
-Dibuat Fresh
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-);
-
+              {/* IMAGE CAPTION */}
+
+              <div
+                className="
+                  absolute
+                  bottom-5
+                  left-5
+                  right-5
+                  rounded-2xl
+                  bg-white/90
+                  dark:bg-slate-900/90
+                  backdrop-blur-xl
+                  border
+                  border-white/80
+                  dark:border-slate-700
+                  p-5
+                  shadow-xl
+                "
+              >
+
+                <div
+                  className="
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                  "
+                >
+
+                  <div>
+
+                    <p
+                      className="
+                        text-[10px]
+                        sm:text-xs
+                        font-bold
+                        uppercase
+                        tracking-[0.18em]
+                        text-orange-500
+                      "
+                    >
+                      Signature Product
+                    </p>
+
+                    <h3
+                      className="
+                        mt-1
+                        text-base
+                        sm:text-lg
+                        font-black
+                        text-slate-900
+                        dark:text-white
+                      "
+                    >
+                      Fresh Fruit Pudding
+                    </h3>
+
+                  </div>
+
+
+                  <div
+                    className="
+                      shrink-0
+                      w-11
+                      h-11
+                      rounded-full
+                      bg-orange-50
+                      dark:bg-slate-800
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+
+                    <Heart
+                      className="
+                        w-5
+                        h-5
+                        text-orange-500
+                        fill-orange-500
+                      "
+                    />
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* QUALITY BADGE */}
+
+            <div
+              className="
+                absolute
+                -top-5
+                left-2
+                sm:-left-6
+                flex
+                items-center
+                gap-3
+                px-4
+                py-3
+                rounded-2xl
+                bg-white/95
+                dark:bg-slate-800/95
+                border
+                border-orange-100
+                dark:border-slate-700
+                shadow-xl
+                backdrop-blur-md
+                animate-float
+              "
+            >
+
+              <div
+                className="
+                  w-10
+                  h-10
+                  rounded-xl
+                  bg-green-100
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+
+                <ShieldCheck
+                  className="
+                    w-5
+                    h-5
+                    text-green-600
+                  "
+                />
+
+              </div>
+
+              <div>
+
+                <p
+                  className="
+                    text-[10px]
+                    text-slate-400
+                  "
+                >
+                  Kualitas
+                </p>
+
+                <p
+                  className="
+                    text-xs
+                    font-bold
+                    text-slate-900
+                    dark:text-white
+                  "
+                >
+                  100% Buah Segar
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* LOCATION BADGE */}
+
+            <div
+              className="
+                absolute
+                -bottom-5
+                right-2
+                sm:-right-6
+                flex
+                items-center
+                gap-3
+                px-4
+                py-3
+                rounded-2xl
+                bg-white/95
+                dark:bg-slate-800/95
+                border
+                border-orange-100
+                dark:border-slate-700
+                shadow-xl
+                backdrop-blur-md
+              "
+            >
+
+              <div
+                className="
+                  w-10
+                  h-10
+                  rounded-xl
+                  bg-orange-100
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+
+                <MapPin
+                  className="
+                    w-5
+                    h-5
+                    text-orange-500
+                  "
+                />
+
+              </div>
+
+              <div>
+
+                <p
+                  className="
+                    text-[10px]
+                    text-slate-400
+                  "
+                >
+                  Melayani
+                </p>
+
+                <p
+                  className="
+                    text-xs
+                    font-bold
+                    text-slate-900
+                    dark:text-white
+                  "
+                >
+                  Pontianak & Sekitar
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
 };

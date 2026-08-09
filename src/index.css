@@ -109,3 +109,21 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Navbar active menu slide */
+@keyframes navSlide {
+  from {
+    opacity: 0;
+    transform: scaleX(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.animate-nav-slide {
+  animation: navSlide 0.3s ease-out;
+  transform-origin: center;
+}
